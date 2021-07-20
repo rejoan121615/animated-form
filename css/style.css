@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background: #E5E5E5;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+section .container {
+  width: 80%;
+  max-width: 550px;
+  height: auto;
+  padding: 25px 35px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */
