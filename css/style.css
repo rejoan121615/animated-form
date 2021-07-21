@@ -74,10 +74,6 @@
   fill: white;
 }
 
-.clip-animation {
-  clip-path: circle(160% at 100% 0);
-}
-
 section {
   width: 100vw;
   height: 300vh;
@@ -92,7 +88,7 @@ section .container {
   margin-left: auto;
   margin-right: auto;
   padding: 35px 40px 50px 40px;
-  transition: all 0.5s, clip-path 0.8s ease-in-out;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 768px) {
   section .container {
@@ -119,6 +115,18 @@ section .container {
   width: 50%;
   height: auto;
   margin-left: -8px;
+}
+
+.out-btn {
+  background-color: white;
+  border: 1.5px solid #32025b;
+  display: none;
+}
+.out-btn svg {
+  margin-left: 6px;
+}
+.out-btn svg path {
+  fill: #32025b;
 }
 
 section .container .brand {

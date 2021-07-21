@@ -105,11 +105,6 @@ $blue: #7b2cbf;
 }
 
 
-// clipping path animation 
-.clip-animation {
-    // clip-path: circle(115.4% at 0 1%);
-    clip-path: circle(160% at 100% 0);
-}
 
 
 section {
@@ -126,7 +121,7 @@ section {
         margin-right: auto;
         padding: 35px 40px 50px 40px;
         // animation 
-        transition: all 0.5s, clip-path 0.8s ease-in-out;
+        transition: all 0.5s;
         @media only screen and (min-width: 768px) {
             padding: 40px 45px 55px 45px;
         }
@@ -154,6 +149,23 @@ section {
                 width: 50%;
                 height: auto;
                 margin-left: -8px;
+            }
+        }
+        // in out btn animation 
+        // @at-root .in-out-btn:hover + .out-btn {
+        //     // clip-path: circle(100% at 50% 50%);
+        // } 
+        @at-root .out-btn {
+            background-color: white;
+            border: 1.5px solid $dark-blue;
+            display: none;
+            // clip-path: circle(0% at 50% 50%);
+            // transition: clip-path 0.5s ease-in-out;
+            svg {
+                margin-left: 6px;
+                path {
+                    fill: $dark-blue;
+                }
             }
         }
         // brand icon
