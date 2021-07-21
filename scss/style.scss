@@ -21,28 +21,122 @@ $blue: #7b2cbf;
     }
 }
 
+#main-wrap {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    @include resp(768px) {
+        width: 80%;
+        max-width: 450px;
+    }
+    .container {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}
+
+// color control
+.sign-in-container {
+    background-color: white;
+    color: $dark-blue;
+    .submit-btn {
+        background-color: $dark-blue;
+        color: white;
+        border: 0px;
+    }
+    input {
+        background-color: transparent;
+        border: 1.5px solid $dark-blue;
+    }
+    .hint {
+        color: darken($color: $dark-blue, $amount: 20);
+    }
+    .warning {
+        svg {
+            path {
+                fill: $dark-blue;
+            }
+        }
+    }
+    .brand {
+        svg {
+            path {
+                fill: $dark-blue;
+            }
+        }
+    }
+}
+.sign-up-container {
+    background-color: $dark-blue;
+    color: white;
+    clip-path: circle(0% at 100% 0);
+    &:hover {
+        clip-path: circle(150% at 100% 0);
+    }
+    .submit-btn {
+        background-color: white;
+        color: $dark-blue;
+        border: 0px;
+    }
+    input {
+        background-color: transparent;
+        border: 1.5px solid white;
+    }
+    .hint {
+        color: darken($color: white, $amount: 20);
+    }
+    .warning {
+        svg {
+            path {
+                fill: white;
+            }
+        }
+    }
+    .brand {
+        svg {
+            path {
+                fill: white;
+            }
+        }
+    }
+}
+
+
+// clipping path animation 
+.clip-animation {
+    // clip-path: circle(115.4% at 0 1%);
+    clip-path: circle(160% at 100% 0);
+}
+
+
 section {
     width: 100vw;
-    height: 100vh;
+    height: 300vh;
     background: #e5e5e5;
     padding-top: 125px;
     .container {
         display: grid;
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
         height: auto;
-        background-color: white;
         border-radius: 25px;
         margin-left: auto;
         margin-right: auto;
-        transition: all 0.5s;
         padding: 35px 40px 50px 40px;
+        // animation 
+        transition: all 0.5s, clip-path 0.8s ease-in-out;
         @media only screen and (min-width: 768px) {
             padding: 40px 45px 55px 45px;
-            max-width: 450px;
         }
         @at-root .in-out-btn {
-            transform: translate3d(55px, -55px, 0px);
+            // position element
+            position: absolute;
+            right: -28px;
+            top: -28px;
+            z-index: 500;
+            // common style
             width: 65px;
             height: 65px;
             background-color: $blue;
@@ -52,9 +146,9 @@ section {
             justify-content: center;
             cursor: pointer;
             justify-self: end;
-            @media only screen and (min-width: 768px) {
-                transform: translate3d(70px, -70px, 0px);
-            }
+            // @media only screen and (min-width: 768px) {
+            //     transform: translate3d(70px, -70px, 0px);
+            // }
             svg {
                 display: inline-block;
                 width: 50%;
@@ -65,7 +159,6 @@ section {
         // brand icon
         .brand {
             width: 80px;
-            margin-top: -50px;
             margin-left: auto;
             margin-right: auto;
             @include resp(768px) {
@@ -74,9 +167,6 @@ section {
             svg {
                 display: block;
                 width: 100%;
-                path {
-                    fill: $dark-blue;
-                }
             }
         }
 
@@ -114,7 +204,6 @@ section {
                     padding: 12.5px;
                     font-size: 14px;
                     margin-top: 8px;
-                    border: 1.5px solid $dark-blue;
                     font-family: $roboto;
                     @include resp(768px) {
                         padding: 15px;
@@ -146,7 +235,6 @@ section {
             .hint {
                 font-family: Arial;
                 font-weight: bold;
-                color: lighten($color: $dark-blue, $amount: 20);
                 text-align: center;
                 display: block;
                 margin-top: 15px;
@@ -156,14 +244,14 @@ section {
                     font-size: 14px;
                 }
             }
-            #sign-in {
-                color: $dark-blue;
-                .submit-btn {
-                    background-color: $dark-blue;
-                    color: white;
-                    border: 0px;
-                }
-            }
+            // #sign-in {
+            //     color: $dark-blue;
+            //     .submit-btn {
+            //         background-color: $dark-blue;
+            //         color: white;
+            //         border: 0px;
+            //     }
+            // }
         }
         // warning icon
         .input-group {
@@ -185,7 +273,7 @@ section {
         }
         .pass-group {
             svg {
-                width: 80%!important;
+                width: 80% !important;
             }
         }
     }

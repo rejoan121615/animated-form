@@ -5,32 +5,105 @@
   box-sizing: border-box;
 }
 
+#main-wrap {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  #main-wrap {
+    width: 80%;
+    max-width: 450px;
+  }
+}
+#main-wrap .container {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.sign-in-container {
+  background-color: white;
+  color: #32025b;
+}
+.sign-in-container .submit-btn {
+  background-color: #32025b;
+  color: white;
+  border: 0px;
+}
+.sign-in-container input {
+  background-color: transparent;
+  border: 1.5px solid #32025b;
+}
+.sign-in-container .hint {
+  color: black;
+}
+.sign-in-container .warning svg path {
+  fill: #32025b;
+}
+.sign-in-container .brand svg path {
+  fill: #32025b;
+}
+
+.sign-up-container {
+  background-color: #32025b;
+  color: white;
+  clip-path: circle(0% at 100% 0);
+}
+.sign-up-container:hover {
+  clip-path: circle(150% at 100% 0);
+}
+.sign-up-container .submit-btn {
+  background-color: white;
+  color: #32025b;
+  border: 0px;
+}
+.sign-up-container input {
+  background-color: transparent;
+  border: 1.5px solid white;
+}
+.sign-up-container .hint {
+  color: #cccccc;
+}
+.sign-up-container .warning svg path {
+  fill: white;
+}
+.sign-up-container .brand svg path {
+  fill: white;
+}
+
+.clip-animation {
+  clip-path: circle(160% at 100% 0);
+}
+
 section {
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
   background: #e5e5e5;
   padding-top: 125px;
 }
 section .container {
   display: grid;
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
   height: auto;
-  background-color: white;
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
-  transition: all 0.5s;
   padding: 35px 40px 50px 40px;
+  transition: all 0.5s, clip-path 0.8s ease-in-out;
 }
 @media only screen and (min-width: 768px) {
   section .container {
     padding: 40px 45px 55px 45px;
-    max-width: 450px;
   }
 }
 .in-out-btn {
-  transform: translate3d(55px, -55px, 0px);
+  position: absolute;
+  right: -28px;
+  top: -28px;
+  z-index: 500;
   width: 65px;
   height: 65px;
   background-color: #7b2cbf;
@@ -41,11 +114,6 @@ section .container {
   cursor: pointer;
   justify-self: end;
 }
-@media only screen and (min-width: 768px) {
-  .in-out-btn {
-    transform: translate3d(70px, -70px, 0px);
-  }
-}
 .in-out-btn svg {
   display: inline-block;
   width: 50%;
@@ -55,7 +123,6 @@ section .container {
 
 section .container .brand {
   width: 80px;
-  margin-top: -50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,9 +134,6 @@ section .container .brand {
 section .container .brand svg {
   display: block;
   width: 100%;
-}
-section .container .brand svg path {
-  fill: #32025b;
 }
 section .container .form-container {
   margin-top: 25px;
@@ -112,7 +176,6 @@ section .container .form-container .input-group input {
   padding: 12.5px;
   font-size: 14px;
   margin-top: 8px;
-  border: 1.5px solid #32025b;
   font-family: "Roboto", sans-serif;
 }
 @media only screen and (min-width: 768px) {
@@ -149,7 +212,6 @@ section .container .form-container .submit-btn {
 section .container .form-container .hint {
   font-family: Arial;
   font-weight: bold;
-  color: #6904bf;
   text-align: center;
   display: block;
   margin-top: 15px;
@@ -160,14 +222,6 @@ section .container .form-container .hint {
   section .container .form-container .hint {
     font-size: 14px;
   }
-}
-section .container .form-container #sign-in {
-  color: #32025b;
-}
-section .container .form-container #sign-in .submit-btn {
-  background-color: #32025b;
-  color: white;
-  border: 0px;
 }
 section .container .input-group {
   position: relative;
