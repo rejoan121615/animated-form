@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Roboto:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,18 +8,188 @@
 section {
   width: 100vw;
   height: 100vh;
-  background: #E5E5E5;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  background: #e5e5e5;
+  padding-top: 125px;
 }
 section .container {
-  width: 80%;
-  max-width: 550px;
+  display: grid;
+  width: 90%;
+  max-width: 400px;
   height: auto;
-  padding: 25px 35px;
   background-color: white;
   border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s;
+  padding: 35px 40px 50px 40px;
+}
+@media only screen and (min-width: 768px) {
+  section .container {
+    padding: 40px 45px 55px 45px;
+    max-width: 450px;
+  }
+}
+.in-out-btn {
+  transform: translate3d(55px, -55px, 0px);
+  width: 65px;
+  height: 65px;
+  background-color: #7b2cbf;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  justify-self: end;
+}
+@media only screen and (min-width: 768px) {
+  .in-out-btn {
+    transform: translate3d(70px, -70px, 0px);
+  }
+}
+.in-out-btn svg {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  margin-left: -8px;
+}
+
+section .container .brand {
+  width: 80px;
+  margin-top: -50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  section .container .brand {
+    width: 105px;
+  }
+}
+section .container .brand svg {
+  display: block;
+  width: 100%;
+}
+section .container .brand svg path {
+  fill: #32025b;
+}
+section .container .form-container {
+  margin-top: 25px;
+}
+section .container .form-container .form-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .form-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+section .container .form-container .input-group {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin-top: 18px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .input-group {
+    margin-top: 25px;
+  }
+}
+section .container .form-container .input-group label {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .input-group label {
+    font-size: 20px;
+  }
+}
+section .container .form-container .input-group input {
+  width: 100%;
+  padding: 12.5px;
+  font-size: 14px;
+  margin-top: 8px;
+  border: 1.5px solid #32025b;
+  font-family: "Roboto", sans-serif;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .input-group input {
+    padding: 15px;
+  }
+}
+section .container .form-container .btn-wrapper {
+  margin-top: 25px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .btn-wrapper {
+    margin-top: 35px;
+  }
+}
+section .container .form-container input,
+section .container .form-container .submit-btn {
+  border-radius: 5px;
+}
+section .container .form-container .submit-btn {
+  padding: 13px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .submit-btn {
+    padding: 17px;
+    font-size: 17px;
+  }
+}
+section .container .form-container .hint {
+  font-family: Arial;
+  font-weight: bold;
+  color: #6904bf;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .form-container .hint {
+    font-size: 14px;
+  }
+}
+section .container .form-container #sign-in {
+  color: #32025b;
+}
+section .container .form-container #sign-in .submit-btn {
+  background-color: #32025b;
+  color: white;
+  border: 0px;
+}
+section .container .input-group {
+  position: relative;
+}
+section .container .input-group .warning {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .input-group .warning {
+    width: 25px;
+    height: 25px;
+  }
+}
+section .container .input-group .warning svg {
+  width: 100%;
+}
+section .container .pass-group svg {
+  width: 80% !important;
 }
 
 /*# sourceMappingURL=style.css.map */

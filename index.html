@@ -1,33 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <section id="form-wrapper">
-        <div class="container">
-            <form>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="text" value="" name="email" placeholder="Your Email?">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <section id="form-wrapper">
+            <div class="container">
+                <div class="in-out-btn">
+                    <svg
+                        viewBox="0 0 63 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M40.0909 23C46.4195 23 51.5455 17.8538 51.5455 11.5C51.5455 5.14625 46.4195 0 40.0909 0C33.7623 0 28.6364 5.14625 28.6364 11.5C28.6364 17.8538 33.7623 23 40.0909 23ZM14.3182 17.25V8.625H8.59091V17.25H0V23H8.59091V31.625H14.3182V23H22.9091V17.25H14.3182ZM40.0909 28.75C32.445 28.75 17.1818 32.6025 17.1818 40.25V46H63V40.25C63 32.6025 47.7368 28.75 40.0909 28.75Z"
+                            fill="white"
+                        />
+                    </svg>
                 </div>
-                <div class="input-group">
-                    <label for="email">Password</label>
-                    <input type="password" value="" name="password" placeholder="Your Password?">
+                
+                <div class="brand">
+                    <svg
+                        viewBox="0 0 144 144"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M43.2001 105.6C53.8039 105.6 62.4001 97.0039 62.4001 86.4001C62.4001 75.7962 53.8039 67.2001 43.2001 67.2001C32.5962 67.2001 24.0001 75.7962 24.0001 86.4001C24.0001 97.0039 32.5962 105.6 43.2001 105.6Z"
+                            fill="white"
+                        />
+                        <path
+                            d="M88.8002 120C95.4276 120 100.8 114.627 100.8 108C100.8 101.373 95.4276 95.9999 88.8002 95.9999C82.1728 95.9999 76.8002 101.373 76.8002 108C76.8002 114.627 82.1728 120 88.8002 120Z"
+                            fill="white"
+                        />
+                        <path
+                            d="M91.2002 81.5999C107.106 81.5999 120 68.7057 120 52.7999C120 36.8941 107.106 23.9999 91.2002 23.9999C75.2944 23.9999 62.4002 36.8941 62.4002 52.7999C62.4002 68.7057 75.2944 81.5999 91.2002 81.5999Z"
+                            fill="white"
+                        />
+                    </svg>
                 </div>
-                <div class="input-group btn-wrapper">
-                    <button type="submit" class="btn submit-btn">Sign in</button>
+                <div class="form-container">
+                    <form id="sign-in">
+                        <h2 class="form-title">log-in yourself</h2>
+                        <div class="input-group email-group">
+                            <label for="email">Email</label>
+                            <input type="text" value="" name="email" />
+                            <div class="warning">
+                                <svg
+                                    viewBox="0 0 40 40"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M20 3.33334C10.8 3.33334 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6667 20 36.6667H28.3334V33.3333H20C12.7667 33.3333 6.66671 27.2333 6.66671 20C6.66671 12.7667 12.7667 6.66668 20 6.66668C27.2334 6.66668 33.3334 12.7667 33.3334 20V22.3833C33.3334 23.7 32.15 25 30.8334 25C29.5167 25 28.3334 23.7 28.3334 22.3833V20C28.3334 15.4 24.6 11.6667 20 11.6667C15.4 11.6667 11.6667 15.4 11.6667 20C11.6667 24.6 15.4 28.3333 20 28.3333C22.3 28.3333 24.4 27.4 25.9 25.8833C26.9834 27.3667 28.85 28.3333 30.8334 28.3333C34.1167 28.3333 36.6667 25.6667 36.6667 22.3833V20C36.6667 10.8 29.2 3.33334 20 3.33334ZM20 25C17.2334 25 15 22.7667 15 20C15 17.2333 17.2334 15 20 15C22.7667 15 25 17.2333 25 20C25 22.7667 22.7667 25 20 25Z"
+                                        fill="#32025B"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group pass-group">
+                            <label for="email">Password</label>
+                            <input type="password" value="" name="password" />
+                            <div class="warning">
+                                <svg
+                                    viewBox="0 0 28 36"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M24 12.3333H22.3333V9.00001C22.3333 4.40001 18.6 0.666672 14 0.666672C9.39996 0.666672 5.66663 4.40001 5.66663 9.00001V12.3333H3.99996C2.16663 12.3333 0.666626 13.8333 0.666626 15.6667V32.3333C0.666626 34.1667 2.16663 35.6667 3.99996 35.6667H24C25.8333 35.6667 27.3333 34.1667 27.3333 32.3333V15.6667C27.3333 13.8333 25.8333 12.3333 24 12.3333ZM14 27.3333C12.1666 27.3333 10.6666 25.8333 10.6666 24C10.6666 22.1667 12.1666 20.6667 14 20.6667C15.8333 20.6667 17.3333 22.1667 17.3333 24C17.3333 25.8333 15.8333 27.3333 14 27.3333ZM19.1666 12.3333H8.83329V9.00001C8.83329 6.15001 11.15 3.83334 14 3.83334C16.85 3.83334 19.1666 6.15001 19.1666 9.00001V12.3333Z"
+                                        fill="#440D73"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group btn-wrapper">
+                            <button type="submit" class="btn submit-btn">
+                                Sign in
+                            </button>
+                            <a href="" class="hint">Forgot your password?</a>
+                        </div>
+                    </form>
+                    <form id="sign-up">
+                        <h2 class="form-title">log-in yourself</h2>
+                        <div class="input-group user-name-group">
+                            <label for="email">User name</label>
+                            <input type="text" value="" name="email" />
+                            <div class="warning">
+                                <svg
+                                    viewBox="0 0 34 33"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M17 0C7.616 0 0 7.29795 0 16.2901C0 25.2822 7.616 32.5801 17 32.5801C26.384 32.5801 34 25.2822 34 16.2901C34 7.29795 26.384 0 17 0ZM17 4.88702C19.822 4.88702 22.1 7.06989 22.1 9.77404C22.1 12.4782 19.822 14.6611 17 14.6611C14.178 14.6611 11.9 12.4782 11.9 9.77404C11.9 7.06989 14.178 4.88702 17 4.88702ZM17 28.0189C12.75 28.0189 8.993 25.9338 6.8 22.7735C6.851 19.5318 13.6 17.7562 17 17.7562C20.383 17.7562 27.149 19.5318 27.2 22.7735C25.007 25.9338 21.25 28.0189 17 28.0189Z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group email-group">
+                            <label for="email">Email</label>
+                            <input type="text" value="" name="email" />
+                            <div class="warning">
+                                <svg
+                                    viewBox="0 0 40 40"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M20 3.33334C10.8 3.33334 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6667 20 36.6667H28.3334V33.3333H20C12.7667 33.3333 6.66671 27.2333 6.66671 20C6.66671 12.7667 12.7667 6.66668 20 6.66668C27.2334 6.66668 33.3334 12.7667 33.3334 20V22.3833C33.3334 23.7 32.15 25 30.8334 25C29.5167 25 28.3334 23.7 28.3334 22.3833V20C28.3334 15.4 24.6 11.6667 20 11.6667C15.4 11.6667 11.6667 15.4 11.6667 20C11.6667 24.6 15.4 28.3333 20 28.3333C22.3 28.3333 24.4 27.4 25.9 25.8833C26.9834 27.3667 28.85 28.3333 30.8334 28.3333C34.1167 28.3333 36.6667 25.6667 36.6667 22.3833V20C36.6667 10.8 29.2 3.33334 20 3.33334ZM20 25C17.2334 25 15 22.7667 15 20C15 17.2333 17.2334 15 20 15C22.7667 15 25 17.2333 25 20C25 22.7667 22.7667 25 20 25Z"
+                                        fill="#32025B"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group pass-group">
+                            <label for="email">Password</label>
+                            <input type="password" value="" name="password" />
+                            <div class="warning">
+                                <svg
+                                    viewBox="0 0 28 36"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M24 12.3333H22.3333V9.00001C22.3333 4.40001 18.6 0.666672 14 0.666672C9.39996 0.666672 5.66663 4.40001 5.66663 9.00001V12.3333H3.99996C2.16663 12.3333 0.666626 13.8333 0.666626 15.6667V32.3333C0.666626 34.1667 2.16663 35.6667 3.99996 35.6667H24C25.8333 35.6667 27.3333 34.1667 27.3333 32.3333V15.6667C27.3333 13.8333 25.8333 12.3333 24 12.3333ZM14 27.3333C12.1666 27.3333 10.6666 25.8333 10.6666 24C10.6666 22.1667 12.1666 20.6667 14 20.6667C15.8333 20.6667 17.3333 22.1667 17.3333 24C17.3333 25.8333 15.8333 27.3333 14 27.3333ZM19.1666 12.3333H8.83329V9.00001C8.83329 6.15001 11.15 3.83334 14 3.83334C16.85 3.83334 19.1666 6.15001 19.1666 9.00001V12.3333Z"
+                                        fill="#440D73"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group btn-wrapper">
+                            <button type="submit" class="btn submit-btn">
+                                Sign in
+                            </button>
+                            <a href="" class="hint">Forgot your password?</a>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </section>
-
-
-    <!-- js file  -->
-    <script src="./js/script.js"></script>
-</body>
+            </div>
+        </section>
+        <!-- js file  -->
+        <script src="./js/script.js"></script>
+    </body>
 </html>
