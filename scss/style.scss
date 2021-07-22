@@ -84,6 +84,7 @@ $blue: #7b2cbf;
     input {
         background-color: transparent;
         border: 1.5px solid white;
+        color: white;
     }
     .hint {
         color: darken($color: white, $amount: 20);
@@ -216,6 +217,7 @@ section {
                     padding: 12.5px;
                     font-size: 14px;
                     margin-top: 8px;
+                    letter-spacing: 1.5px;
                     font-family: $roboto;
                     @include resp(768px) {
                         padding: 15px;

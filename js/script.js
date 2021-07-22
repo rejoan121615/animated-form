@@ -31,7 +31,7 @@ document.querySelector(".in-btn").addEventListener("click", () => {
                         }
                     )
                     .to(".in-btn", {
-                        display: "none",
+                        // display: "none",
                         "clip-path": "circle(0% at 50% 50%)",
                         zIndex: 700
                     }).to('.out-btn', {
@@ -68,7 +68,7 @@ document.querySelector(".out-btn").addEventListener("click", () => {
                         }
                     )
                     .to(".out-btn", {
-                        display: "none",
+                        // display: "none",
                         "clip-path": "circle(0% at 50% 50%)",
                         zIndex: 700,
                     }).to('.in-btn', {
@@ -78,3 +78,17 @@ document.querySelector(".out-btn").addEventListener("click", () => {
         }
     );
 });
+
+
+// form validation 
+let email = document.querySelector('#email');
+
+email.addEventListener('keydown', () => {
+    console.log('email')
+})
+
+function validateEmail() {
+    let emailWarning = document.querySelector('.email-group .alert');
+    
+    // if ()
+}
