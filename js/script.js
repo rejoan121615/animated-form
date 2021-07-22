@@ -33,17 +33,17 @@ document.querySelector(".in-btn").addEventListener("click", () => {
                     .to(".in-btn", {
                         // display: "none",
                         "clip-path": "circle(0% at 50% 50%)",
-                        zIndex: 700
-                    }).to('.out-btn', {
-                        zIndex: 500
+                        zIndex: 700,
                     })
+                    .to(".out-btn", {
+                        zIndex: 500,
+                    });
             },
         }
     );
 });
 
 document.querySelector(".out-btn").addEventListener("click", () => {
-    console.log("out btn");
     timeline.fromTo(
         ".sign-up-container",
         {
@@ -71,24 +71,59 @@ document.querySelector(".out-btn").addEventListener("click", () => {
                         // display: "none",
                         "clip-path": "circle(0% at 50% 50%)",
                         zIndex: 700,
-                    }).to('.in-btn', {
-                        zIndex: 500
                     })
+                    .to(".in-btn", {
+                        zIndex: 500,
+                    });
             },
         }
     );
 });
 
+// form validation
+let signIn = document.querySelector('#sign-in');
+let signUp = document.querySelector('#sign-up');
 
-// form validation 
-let email = document.querySelector('#email');
+let forms = document.querySelectorAll('form');
 
-email.addEventListener('keydown', () => {
-    console.log('email')
-})
+// // form event 
+validateForm(forms[0]);
+validateForm(forms[1]);
 
-function validateEmail() {
-    let emailWarning = document.querySelector('.email-group .alert');
-    
-    // if ()
+
+function validateForm(form) {
+    let submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.addEventListener('click', (clickBtn) => {
+        let alertBox = form.querySelectorAll('.alert');
+        form.querySelectorAll('input').forEach((input, index) => {
+            if (!input.value) {
+                clickBtn.preventDefault();
+            } else {
+                
+                // get all of your input value from here 
+                do {
+                    console.log(alertBox)
+                } while (false);
+                // click btn 
+                clickBtn.preventDefault();
+            }
+        })
+    })
 }
+
+// pristine validation 
+// window.onload = function () {
+//     var form = document.getElementById("sign-in");
+
+//     // create the pristine instance
+//     var pristine = new Pristine(form);
+
+//     form.addEventListener("submit", function (e) {
+//         e.preventDefault();
+
+//         // check if the form is valid
+//         var valid = pristine.validate(); // returns true or false
+//         console.log(valid);
+//         console.log(pristine);
+//     });
+// };
