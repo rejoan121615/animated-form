@@ -21,6 +21,10 @@ $blue: #7b2cbf;
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #main-wrap {
     position: relative;
     width: 90%;
@@ -110,9 +114,13 @@ $blue: #7b2cbf;
 
 section {
     width: 100vw;
-    height: 300vh;
+    height: 800px;
     background: #e5e5e5;
-    padding-top: 125px;
+    padding-top: 75px;
+    @include resp (768px) {
+        padding-top: 110px;
+        height: 950px;
+    }
     .container {
         display: grid;
         width: 100%;
